@@ -95,63 +95,6 @@ public class Main {
                     System.out.println("Área da superfície do prisma: " + areaSuperficiePrisma);
                     System.out.println("Volume do prisma: " + volumePrisma);
                     break;
-                case 10:
-                    System.out.print("Digite o raio do cilindro: ");
-                    double raioCilindro = scanner.nextDouble();
-                    System.out.print("Digite a altura do cilindro: ");
-                    double alturaCilindro = scanner.nextDouble();
-                    double volumeCilindro = geometriaEspacial.calcularVolumeCilindro(raioCilindro, alturaCilindro);
-                    double areaSuperficieCilindro = geometriaEspacial.calcularAreaSuperficieCilindro(raioCilindro, alturaCilindro);
-                    System.out.println("Área da superfície do cilindro: " + areaSuperficieCilindro);
-                    System.out.println("Volume do cilindro: " + volumeCilindro);
-                    break;
-                case 11:
-                    System.out.print("Digite a base da pirâmide: ");
-                    double basePiramide = scanner.nextDouble();
-                    System.out.print("Digite a altura da pirâmide: ");
-                    double alturaPiramide = scanner.nextDouble();
-                    System.out.print("Digite a apotema da pirâmide: ");
-                    double apotemaPiramide = scanner.nextDouble();
-                    double volumePiramide = geometriaEspacial.calcularVolumePiramide(basePiramide, alturaPiramide);
-                    double areaSuperficiePiramide = geometriaEspacial.calcularAreaSuperficiePiramide(basePiramide, alturaPiramide, apotemaPiramide);
-                    System.out.println("Área da superfície da pirâmide: " + areaSuperficiePiramide);
-                    System.out.println("Volume da pirâmide: " + volumePiramide);
-                    break;
-                case 12:
-                    System.out.print("Digite o raio da esfera: ");
-                    double raioEsfera = scanner.nextDouble();
-                    double volumeEsfera = geometriaEspacial.calcularVolumeEsfera(raioEsfera);
-                    double areaSuperficieEsfera = geometriaEspacial.calcularAreaSuperficieEsfera(raioEsfera);
-                    System.out.println("Área da superfície da esfera: " + areaSuperficieEsfera);
-                    System.out.println("Volume da esfera: " + volumeEsfera);
-                    break;
-                case 13:
-                    System.out.print("Digite o raio do cone: ");
-                    double raioCone = scanner.nextDouble();
-                    System.out.print("Digite a altura do cone: ");
-                    double alturaCone = scanner.nextDouble();
-                    double volumeCone = geometriaEspacial.calcularVolumeCone(raioCone, alturaCone);
-                    double areaSuperficieCone = geometriaEspacial.calcularAreaSuperficieCone(raioCone, alturaCone);
-                    System.out.println("Área da superfície do cone: " + areaSuperficieCone);
-                    System.out.println("Volume do cone: " + volumeCone);
-                    break;
-                case 14:
-                    System.out.print("Digite o raio maior do tronco de cone: ");
-                    double raioMaiorTronco = scanner.nextDouble();
-                    System.out.print("Digite o raio menor do tronco de cone: ");
-                    double raioMenorTronco = scanner.nextDouble();
-                    System.out.print("Digite a altura do tronco de cone: ");
-                    double alturaTronco = scanner.nextDouble();
-                    double volumeTronco = geometriaEspacial.calcularVolumeTronco(raioMaiorTronco, raioMenorTronco, alturaTronco);
-                    double areaSuperficieTronco = geometriaEspacial.calcularAreaSuperficieTronco(raioMaiorTronco, raioMenorTronco, alturaTronco);
-                    System.out.println("Área da superfície do tronco de cone: " + areaSuperficieTronco);
-                    System.out.println("Volume do tronco de cone: " + volumeTronco);
-                    break;
-                case 15:
-                    System.out.println("Saindo...");
-                    break;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
             }
         } while (escolha != 15);
         scanner.close();
