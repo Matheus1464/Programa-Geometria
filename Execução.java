@@ -31,7 +31,7 @@ public class Execução {
     }
  
 
-    private static int menuPrincipal(Scanner scanner) {
+    public static int menuPrincipal(Scanner scanner) {
         System.out.println("\nEscolha uma opção:");
         System.out.println("1 Geometria plana");
         System.out.println("2 Geometria espacial");
@@ -40,7 +40,7 @@ public class Execução {
     }
  
 
-    private static void menuGeometriaPlana(Scanner scanner, G_Plana geometriaPlana) {
+    public static void menuGeometriaPlana(Scanner scanner, G_Plana geometriaPlana) {
         int escolha;
         do {
             System.out.println("\nEscolha uma opção:");
@@ -129,7 +129,7 @@ public class Execução {
     }
  
 
-    private static void menuGeometriaEspacial(Scanner scanner, G_Espacial geometriaEspacial) {
+    public static void menuGeometriaEspacial(Scanner scanner, G_Espacial geometriaEspacial) {
         int escolha;
         do {
             System.out.println("\nEscolha uma opção:");
