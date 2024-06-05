@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
  
 public class Execução {
@@ -6,16 +7,19 @@ public class Execução {
         G_Plana geometriaPlana = new G_Plana();
         G_Espacial geometriaEspacial = new G_Espacial();
         int escolha;
- 
+
+
         do {
             escolha = menuPrincipal(scanner);
             switch (escolha) {
                 case 1:
                     menuGeometriaPlana(scanner, geometriaPlana);
                     break;
+
                 case 2:
                     menuGeometriaEspacial(scanner, geometriaEspacial);
                     break;
+
                 case 3:
                     System.out.println("\nSaindo");
                     break;
@@ -26,6 +30,7 @@ public class Execução {
         scanner.close();
     }
  
+
     private static int menuPrincipal(Scanner scanner) {
         System.out.println("\nEscolha uma opção:");
         System.out.println("1 Geometria plana");
@@ -34,6 +39,7 @@ public class Execução {
         return scanner.nextInt();
     }
  
+
     private static void menuGeometriaPlana(Scanner scanner, G_Plana geometriaPlana) {
         int escolha;
         do {
@@ -51,12 +57,14 @@ public class Execução {
             escolha = scanner.nextInt();
             double lado, base, altura, diagonalMaior, diagonalMenor, raio;
  
+
             switch (escolha) {
                 case 1:
                     System.out.print("\nDigite o lado do quadrado: ");
                     lado = scanner.nextDouble();
                     System.out.println("Área do quadrado: " + geometriaPlana.AreaQuadrado(lado));
                     break;
+
                 case 2:
                     System.out.print("\nDigite a base do retângulo: ");
                     base = scanner.nextDouble();
@@ -64,6 +72,7 @@ public class Execução {
                     altura = scanner.nextDouble();
                     System.out.println("Área do retângulo: " + geometriaPlana.AreaRetangulo(base, altura));
                     break;
+
                 case 3:
                     System.out.print("\nDigite a base do triângulo: ");
                     base = scanner.nextDouble();
@@ -71,11 +80,13 @@ public class Execução {
                     altura = scanner.nextDouble();
                     System.out.println("Área do triângulo: " + geometriaPlana.AreaTriangulo(base, altura));
                     break;
+
                 case 4:
                     System.out.print("\nDigite o lado do triângulo equilátero: ");
                     lado = scanner.nextDouble();
                     System.out.println("Área do triângulo equilátero: " + geometriaPlana.AreaTrianguloEquilatero(lado));
                     break;
+
                 case 5:
                     System.out.print("\nDigite a base do paralelogramo: ");
                     base = scanner.nextDouble();
@@ -83,6 +94,7 @@ public class Execução {
                     altura = scanner.nextDouble();
                     System.out.println("Área do paralelogramo: " + geometriaPlana.AreaParalelogramo(base, altura));
                     break;
+
                 case 6:
                     System.out.print("\nDigite a diagonal maior do losango: ");
                     diagonalMaior = scanner.nextDouble();
@@ -90,6 +102,7 @@ public class Execução {
                     diagonalMenor = scanner.nextDouble();
                     System.out.println("Área do losango: " + geometriaPlana.AreaLosango(diagonalMaior, diagonalMenor));
                     break;
+
                 case 7:
                     System.out.print("\nDigite a base maior do trapézio: ");
                     base = scanner.nextDouble();
@@ -99,11 +112,13 @@ public class Execução {
                     altura = scanner.nextDouble();
                     System.out.println("Área do trapézio: " + geometriaPlana.AreaTrapezio(base, baseMenor, altura));
                     break;
+
                 case 8:
                     System.out.print("\nDigite o raio do círculo: ");
                     raio = scanner.nextDouble();
                     System.out.println("Área do círculo: " + geometriaPlana.AreaCirculo(raio));
                     break;
+                    
                 case 9:
                     System.out.println("\nVoltando ao menu principal");
                     break;
@@ -113,6 +128,7 @@ public class Execução {
         } while (escolha != 9);
     }
  
+
     private static void menuGeometriaEspacial(Scanner scanner, G_Espacial geometriaEspacial) {
         int escolha;
         do {
@@ -128,6 +144,7 @@ public class Execução {
             escolha = scanner.nextInt();
             double base, altura, profundidade, raio, apotema, raioMaior, raioMenor;
  
+
             switch (escolha) {
                 case 1:
                     System.out.print("\nDigite a base do prisma: ");
@@ -139,6 +156,7 @@ public class Execução {
                     System.out.println("Área da superfície do prisma: " + geometriaEspacial.AreaPrisma(base, altura, profundidade));
                     System.out.println("Volume do prisma: " + geometriaEspacial.VolumePrisma(base, altura, profundidade));
                     break;
+                    
                 case 2:
                     System.out.print("\nDigite o raio do cilindro: ");
                     raio = scanner.nextDouble();
@@ -147,6 +165,7 @@ public class Execução {
                     System.out.println("Área da superfície do cilindro: " + geometriaEspacial.AreaCilindro(raio, altura));
                     System.out.println("Volume do cilindro: " + geometriaEspacial.VolumeCilindro(raio, altura));
                     break;
+
                 case 3:
                     System.out.print("\nDigite a base da pirâmide: ");
                     base = scanner.nextDouble();
@@ -157,12 +176,14 @@ public class Execução {
                     System.out.println("Área da superfície da pirâmide: " + geometriaEspacial.AreaPiramide(base, altura, apotema));
                     System.out.println("Volume da pirâmide: " + geometriaEspacial.VolumePiramide(base, altura));
                     break;
+
                 case 4:
                     System.out.print("\nDigite o raio da esfera: ");
                     raio = scanner.nextDouble();
                     System.out.println("Área da superfície da esfera: " + geometriaEspacial.AreaEsfera(raio));
                     System.out.println("Volume da esfera: " + geometriaEspacial.VolumeEsfera(raio));
                     break;
+
                 case 5:
                     System.out.print("\nDigite o raio do cone: ");
                     raio = scanner.nextDouble();
@@ -171,6 +192,7 @@ public class Execução {
                     System.out.println("Área da superfície do cone: " + geometriaEspacial.AreaCone(raio, altura));
                     System.out.println("Volume do cone: " + geometriaEspacial.VolumeCone(raio, altura));
                     break;
+
                 case 6:
                     System.out.print("\nDigite o raio maior do tronco de cone: ");
                     raioMaior = scanner.nextDouble();
@@ -181,11 +203,13 @@ public class Execução {
                     System.out.println("Área da superfície do tronco de cone: " + geometriaEspacial.AreaTronco(raioMaior, raioMenor, altura));
                     System.out.println("Volume do tronco de cone: " + geometriaEspacial.VolumeTronco(raioMaior, raioMenor, altura));
                     break;
+
                 case 7:
                     System.out.println("\nVoltando ao menu principal");
                     break;
                 default:
                     System.out.println("\nOpção inválida.");
+
             }
         } while (escolha != 7);
     }

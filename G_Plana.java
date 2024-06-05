@@ -1,5 +1,6 @@
 
 public class G_Plana {
+    
     public double AreaQuadrado(double lado) {
         return lado * lado;
     }
